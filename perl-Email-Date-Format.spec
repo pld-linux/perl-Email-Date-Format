@@ -1,5 +1,6 @@
 #
 # Conditional build:
+%bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
@@ -61,7 +62,7 @@ zgodnych z RFC także można tu znaleźć.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -70,4 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%dir %{perl_vendorlib}/Email/Date
 %{perl_vendorlib}/Email/Date/*.pm
+%{_mandir}/man3/*
