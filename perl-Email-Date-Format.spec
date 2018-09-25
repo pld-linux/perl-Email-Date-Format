@@ -8,13 +8,13 @@
 Summary:	Email::Date::Format - format Date headers
 Summary(pl.UTF-8):	Email::Date::Format - formatowanie nagłówków Date
 Name:		perl-Email-Date-Format
-Version:	1.002
+Version:	1.005
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Email/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7ae25275da6ab272aa8b40141eac9f82
+# Source0-md5:	030dcee3bc1a44674900b0132925bd03
 URL:		http://search.cpan.org/dist/Email-Date-Format/
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
